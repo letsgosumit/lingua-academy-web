@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { BookOpen, Users, Globe, Award, Clock, Headphones } from "lucide-react";
-import heroImage from "@/assets/hero-paris.jpg";
+import heroImage from "@/assets/hero-classroom.jpg";
 
 const stats = [
   { value: "5,000+", label: "Students Enrolled" },
@@ -25,7 +25,7 @@ const Home = () => (
   <main>
     {/* Hero */}
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      <img src={heroImage} alt="Paris skyline" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
+      <img src={heroImage} alt="French classroom" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
       <div className="absolute inset-0 bg-navy-dark/70" />
       <div className="relative z-10 text-center px-4 max-w-3xl">
         <motion.h1
