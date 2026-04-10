@@ -104,6 +104,37 @@ const Courses = () => (
         ))}
       </div>
     </section>
+
+    {/* FAQ */}
+    <section className="py-16 bg-background">
+      <div className="container mx-auto px-4 max-w-3xl">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-display text-3xl md:text-4xl font-bold text-foreground text-center"
+        >
+          Frequently Asked <span className="text-primary">Questions</span>
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="mt-3 text-muted-foreground text-center mb-8"
+        >
+          Everything you need to know before you start learning French with us.
+        </motion.p>
+        <Accordion type="single" collapsible className="w-full">
+          {faqs.map((faq, i) => (
+            <AccordionItem key={i} value={`faq-${i}`}>
+              <AccordionTrigger className="text-left text-foreground">{faq.q}</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
   </main>
 );
 
