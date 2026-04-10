@@ -15,32 +15,32 @@
     --popover: 0 0% 100%;
     --popover-foreground: 215 50% 15%;
 
-    --primary: 215 60% 22%;
+    --primary: 225 80% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 215 30% 94%;
-    --secondary-foreground: 215 60% 22%;
+    --secondary: 225 30% 94%;
+    --secondary-foreground: 225 80% 30%;
 
-    --muted: 215 20% 96%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 225 20% 96%;
+    --muted-foreground: 225 15% 45%;
 
-    --accent: 40 90% 55%;
-    --accent-foreground: 215 60% 15%;
+    --accent: 0 80% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 25% 88%;
-    --input: 215 25% 88%;
-    --ring: 215 60% 22%;
+    --border: 225 25% 88%;
+    --input: 225 25% 88%;
+    --ring: 225 80% 30%;
 
     --radius: 0.5rem;
 
-    --navy: 215 60% 22%;
-    --navy-light: 215 45% 35%;
-    --navy-dark: 215 70% 12%;
-    --gold: 40 90% 55%;
-    --cream: 40 30% 97%;
+    --navy: 225 80% 30%;
+    --navy-light: 225 60% 42%;
+    --navy-dark: 225 85% 15%;
+    --gold: 0 80% 50%;
+    --cream: 220 30% 97%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Source Sans 3', sans-serif;
