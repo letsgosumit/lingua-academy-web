@@ -45,6 +45,14 @@ const courses = [
     features: ["Saturday & Sunday batches", "Conversational fluency focus", "French culture & etiquette", "Movie & music analysis", "Group discussion practice"],
     popular: false,
   },
+  {
+    title: "TEF Canada Preparation",
+    level: "Intermediate (B1–B2)",
+    price: "₹12,999",
+    duration: "12 weeks · 36 sessions",
+    features: ["Full TEF exam structure & strategies", "Compréhension orale & écrite drills", "Expression orale mock interviews", "Expression écrite guided essays", "2 full-length mock tests with scoring", "Personalized feedback & study plan"],
+    popular: false,
+  },
 ];
 
 const fade = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }) };
