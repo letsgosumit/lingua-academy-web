@@ -13,7 +13,7 @@ export default {
     extend: {
       fontFamily: {
         display: ["Playfair Display", "serif"],
-        body: ["Source Sans 3", "sans-serif"],
+        body: ["DM Sans", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -31,6 +31,7 @@ export default {
         navy: { DEFAULT: "hsl(var(--navy))", light: "hsl(var(--navy-light))", dark: "hsl(var(--navy-dark))" },
         gold: "hsl(var(--gold))",
         cream: "hsl(var(--cream))",
+        crimson: "hsl(var(--crimson))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

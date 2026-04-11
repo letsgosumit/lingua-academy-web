@@ -22,91 +22,62 @@ const Contact = () => {
     }, 1000);
   };
 
+  const inputClass = "mt-1 w-full rounded-lg border border-white/[0.08] bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-crimson/50 transition-all duration-300";
+
   return (
-    <main className="pt-16">
-      <section className="bg-primary py-20 text-center">
-        <div className="container mx-auto px-4">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">
-            Contact <span className="text-gold">Us</span>
+    <main className="pt-20">
+      <section className="bg-secondary section-padding text-center">
+        <div className="section-container">
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-foreground gold-underline pb-4">
+            Contact Us
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-muted-foreground max-w-xl mx-auto">
             Have questions or want to enroll? Drop us a message and we'll respond within 24 hours.
           </motion.p>
         </div>
       </section>
 
-      <section className="py-16 bg-cream">
-        <div className="container mx-auto px-4 grid md:grid-cols-3 gap-10 max-w-5xl">
-          {/* Info */}
-          <div className="space-y-6">
+      <section className="section-padding bg-background">
+        <div className="section-container grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+          <div className="space-y-8">
             <h2 className="font-display text-xl font-bold text-foreground">Get in Touch</h2>
-            <div className="flex items-start gap-3 text-sm text-muted-foreground">
-              <Mail size={18} className="text-primary mt-0.5" />
-              <div><p className="font-semibold text-foreground">Email</p>hello@linguafrench.in</div>
-            </div>
-            <div className="flex items-start gap-3 text-sm text-muted-foreground">
-              <Phone size={18} className="text-primary mt-0.5" />
-              <div><p className="font-semibold text-foreground">Phone</p>+91 98765 43210</div>
-            </div>
-            <div className="flex items-start gap-3 text-sm text-muted-foreground">
-              <MapPin size={18} className="text-primary mt-0.5" />
-              <div><p className="font-semibold text-foreground">Location</p>Online — Learn from anywhere</div>
-            </div>
+            {[
+              { icon: Mail, label: "Email", value: "hello@linguafrench.in" },
+              { icon: Phone, label: "Phone", value: "+91 98765 43210" },
+              { icon: MapPin, label: "Location", value: "Online — Learn from anywhere" },
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-4 text-sm">
+                <div className="w-10 h-10 rounded-lg bg-crimson/10 flex items-center justify-center shrink-0">
+                  <item.icon size={18} className="text-crimson" />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">{item.label}</p>
+                  <p className="text-muted-foreground">{item.value}</p>
+                </div>
+              </div>
+            ))}
           </div>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="md:col-span-2 bg-card rounded-lg border p-6 space-y-4 shadow-sm">
-            <div className="grid sm:grid-cols-2 gap-4">
+          <form onSubmit={handleSubmit} className="md:col-span-2 card-premium p-8 space-y-5">
+            <div className="grid sm:grid-cols-2 gap-5">
               <div>
                 <label className="text-sm font-medium text-foreground">Name *</label>
-                <input
-                  type="text"
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  maxLength={100}
-                  className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="Your name"
-                />
+                <input type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} maxLength={100} className={inputClass} placeholder="Your name" />
               </div>
               <div>
                 <label className="text-sm font-medium text-foreground">Email *</label>
-                <input
-                  type="email"
-                  value={form.email}
-                  onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  maxLength={255}
-                  className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                  placeholder="you@example.com"
-                />
+                <input type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} maxLength={255} className={inputClass} placeholder="you@example.com" />
               </div>
             </div>
             <div>
               <label className="text-sm font-medium text-foreground">Phone (optional)</label>
-              <input
-                type="tel"
-                value={form.phone}
-                onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                maxLength={15}
-                className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-                placeholder="+91 XXXXX XXXXX"
-              />
+              <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} maxLength={15} className={inputClass} placeholder="+91 XXXXX XXXXX" />
             </div>
             <div>
               <label className="text-sm font-medium text-foreground">Message *</label>
-              <textarea
-                value={form.message}
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-                maxLength={1000}
-                rows={4}
-                className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-ring resize-none"
-                placeholder="Tell us what you're looking for…"
-              />
+              <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} maxLength={1000} rows={4} className={`${inputClass} resize-none`} placeholder="Tell us what you're looking for…" />
             </div>
-            <button
-              type="submit"
-              disabled={sending}
-              className="bg-primary text-primary-foreground px-6 py-2.5 rounded-md font-semibold text-sm hover:bg-navy-light transition flex items-center gap-2 disabled:opacity-60"
-            >
+            <button type="submit" disabled={sending} className="btn-cta px-8 py-3 disabled:opacity-60">
               <Send size={16} /> {sending ? "Sending…" : "Send Message"}
             </button>
           </form>
