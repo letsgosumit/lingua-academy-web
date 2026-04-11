@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import Testimonials from "@/components/Testimonials";
 
 const faqs = [
   { q: "How do I enroll in a course?", a: "Simply click the 'Enroll Now' button on any course card above, fill in the contact form, and our team will reach out within 24 hours with batch details and payment instructions." },
@@ -58,20 +59,20 @@ const courses = [
 const fade = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: i * 0.1, duration: 0.5 } }) };
 
 const Courses = () => (
-  <main className="pt-16">
-    <section className="bg-primary py-20 text-center">
-      <div className="container mx-auto px-4">
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-primary-foreground">
-          Our <span className="text-gold">Courses</span>
+  <main className="pt-20">
+    <section className="bg-secondary section-padding text-center">
+      <div className="section-container">
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-foreground gold-underline pb-4">
+          Our Courses
         </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-4 text-primary-foreground/70 max-w-xl mx-auto">
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-muted-foreground max-w-xl mx-auto">
           Affordable beginner programs crafted for every age group. All prices in INR, no hidden charges.
         </motion.p>
       </div>
     </section>
 
-    <section className="py-16 bg-cream">
-      <div className="container mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="section-padding bg-background">
+      <div className="section-container grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((c, i) => (
           <motion.div
             key={i}
@@ -80,30 +81,30 @@ const Courses = () => (
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className={`relative bg-card rounded-lg border p-6 flex flex-col ${c.popular ? "ring-2 ring-gold" : ""}`}
+            className={`relative card-premium p-8 flex flex-col ${c.popular ? "ring-2 ring-gold" : ""}`}
           >
             {c.popular && (
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-accent-foreground text-xs font-bold px-3 py-1 rounded-full">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-background text-xs font-bold px-4 py-1 rounded-full">
                 Most Popular
               </span>
             )}
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{c.level}</span>
             <h3 className="font-display text-xl font-bold text-foreground mt-2">{c.title}</h3>
             <p className="text-sm text-muted-foreground mt-1">{c.duration}</p>
-            <p className="text-3xl font-display font-bold text-primary mt-4">{c.price}</p>
-            <ul className="mt-5 flex-1 space-y-2">
+            <p className="text-3xl font-display font-bold text-gold mt-5">{c.price}</p>
+            <ul className="mt-6 flex-1 space-y-3">
               {c.features.map((f, j) => (
-                <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <Check size={16} className="text-gold mt-0.5 shrink-0" /> {f}
+                <li key={j} className="flex items-start gap-2.5 text-sm text-muted-foreground">
+                  <Check size={16} className="text-crimson mt-0.5 shrink-0" /> {f}
                 </li>
               ))}
             </ul>
             <Link
               to="/contact"
-              className={`mt-6 block text-center py-2.5 rounded-md font-semibold text-sm transition ${
+              className={`mt-8 block text-center py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                 c.popular
-                  ? "bg-gold text-accent-foreground hover:brightness-110"
-                  : "bg-primary text-primary-foreground hover:bg-navy-light"
+                  ? "btn-cta"
+                  : "bg-secondary text-foreground hover:bg-crimson hover:text-white"
               }`}
             >
               Enroll Now
@@ -113,31 +114,34 @@ const Courses = () => (
       </div>
     </section>
 
+    {/* Testimonials */}
+    <Testimonials />
+
     {/* FAQ */}
-    <section className="py-16 bg-background">
-      <div className="container mx-auto px-4 max-w-3xl">
+    <section className="section-padding bg-secondary">
+      <div className="section-container max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-3xl md:text-4xl font-bold text-foreground text-center"
+          className="font-display text-3xl md:text-4xl font-bold text-foreground text-center gold-underline pb-4"
         >
-          Frequently Asked <span className="text-primary">Questions</span>
+          Frequently Asked Questions
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="mt-3 text-muted-foreground text-center mb-8"
+          className="mt-6 text-muted-foreground text-center mb-10"
         >
           Everything you need to know before you start learning French with us.
         </motion.p>
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full space-y-3">
           {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`}>
-              <AccordionTrigger className="text-left text-foreground">{faq.q}</AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">{faq.a}</AccordionContent>
+            <AccordionItem key={i} value={`faq-${i}`} className="card-premium px-6 border-none">
+              <AccordionTrigger className="text-left text-foreground hover:text-crimson transition-colors duration-300 py-5">{faq.q}</AccordionTrigger>
+              <AccordionContent className="text-muted-foreground pb-5">{faq.a}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
