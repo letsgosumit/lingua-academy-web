@@ -25,13 +25,13 @@ const fade = {
 };
 
 const Testimonials = () => (
-  <section className="section-padding bg-background">
+  <section className="section-light section-padding">
     <div className="section-container text-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="font-display text-3xl md:text-4xl font-bold text-foreground gold-underline pb-4"
+        className="font-display text-3xl md:text-4xl font-bold text-primary heading-underline"
       >
         What Our Students Say
       </motion.h2>
@@ -40,7 +40,7 @@ const Testimonials = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="mt-6 text-muted-foreground max-w-xl mx-auto"
+        className="mt-8 text-muted-foreground max-w-xl mx-auto"
       >
         Hear from our learners who've transformed their careers and lives through French.
       </motion.p>
@@ -57,20 +57,20 @@ const Testimonials = () => (
             className="card-premium p-8 text-left"
           >
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                <User className="text-muted-foreground" size={22} />
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                <User className="text-primary" size={22} />
               </div>
               <div>
                 <p className="font-semibold text-foreground">{t.name}</p>
                 <div className="flex gap-0.5 mt-0.5">
                   {[...Array(5)].map((_, j) => (
-                    <Star key={j} size={14} className="fill-gold text-gold" />
+                    <Star key={j} size={14} className="fill-amber-400 text-amber-400" />
                   ))}
                 </div>
               </div>
             </div>
             <p className="text-muted-foreground italic leading-relaxed text-sm">"{t.quote}"</p>
-            <p className="mt-4 text-xs font-semibold text-gold tracking-wide uppercase">{t.course}</p>
+            <p className="mt-4 text-xs font-semibold text-primary tracking-wide uppercase">{t.course}</p>
           </motion.div>
         ))}
       </div>
