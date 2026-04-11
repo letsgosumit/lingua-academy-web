@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -22,13 +23,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-xl shadow-lg shadow-black/20" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-primary-dark ${
+        scrolled ? "shadow-lg" : ""
       }`}
     >
       <div className="section-container flex items-center justify-between h-20">
-        <Link to="/" className="font-display text-2xl font-bold text-foreground tracking-wide">
-          Lingua <span className="text-gold">French</span>
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Lingua French Academy" className="h-14 w-auto" />
         </Link>
 
         {/* Desktop */}
@@ -37,8 +38,8 @@ const Navbar = () => {
             <Link
               key={link.to}
               to={link.to}
-              className={`relative text-sm font-medium tracking-[0.5px] transition-colors duration-300 hover:text-crimson ${
-                location.pathname === link.to ? "text-crimson" : "text-foreground/70"
+              className={`relative text-sm font-medium uppercase tracking-[1px] transition-colors duration-300 hover:text-crimson ${
+                location.pathname === link.to ? "text-white" : "text-white/80"
               } after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-crimson after:transition-all after:duration-300 ${
                 location.pathname === link.to ? "after:w-full" : "after:w-0 hover:after:w-full"
               }`}
@@ -51,20 +52,20 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden bg-background/95 backdrop-blur-xl border-t border-white/[0.08] pb-6">
+        <div className="md:hidden bg-primary-dark border-t border-white/10 pb-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setOpen(false)}
-              className={`block px-6 py-3.5 text-sm font-medium transition-colors duration-300 ${
-                location.pathname === link.to ? "text-crimson" : "text-foreground/70 hover:text-crimson"
+              className={`block px-6 py-3.5 text-sm font-medium uppercase tracking-[1px] transition-colors duration-300 ${
+                location.pathname === link.to ? "text-white" : "text-white/70 hover:text-crimson"
               }`}
             >
               {link.label}
