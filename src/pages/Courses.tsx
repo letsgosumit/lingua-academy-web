@@ -20,7 +20,7 @@ const courses = [
     price: "₹11,000",
     duration: "8 weeks · 24 sessions",
     features: ["Alphabets, pronunciation & greetings", "Basic vocabulary (500+ words)", "Simple conversations & role-plays", "Weekly assignments & quizzes", "Certificate of completion"],
-    popular: false,
+    popular: false,paymentLink: "https://rzp.io/rzp/NKxsjB5",
   },
   {
     title: "French A2",
@@ -28,7 +28,7 @@ const courses = [
     price: "₹14,000",
     duration: "12 weeks · 36 sessions",
     features: ["Everything in A1", "Grammar deep-dive (tenses, articles)", "Reading & writing short texts", "Listening comprehension exercises", "Mock DELF A2 preparation", "1-on-1 mentor session"],
-    popular: true,
+    popular: true,paymentLink: "https://rzp.io/rzp/tpLwuiy",
   },
   {
     title: "French B1",
@@ -36,7 +36,7 @@ const courses = [
     price: "₹21,000",
     duration: "16 weeks · 48 sessions",
     features: ["Advanced grammar & conjugation", "Conversational fluency practice", "Reading comprehension & essays", "French culture & current affairs", "Mock DELF B1 preparation", "Personalized feedback"],
-    popular: false,
+    popular: false,paymentLink: "https://rzp.io/rzp/i1nDPRY",
   },
   {
     title: "TCF Preparation",
@@ -44,7 +44,7 @@ const courses = [
     price: "₹69,000",
     duration: "14 weeks · 42 sessions",
     features: ["Full TCF exam structure & strategies", "Compréhension orale & écrite drills", "Expression orale mock interviews", "Expression écrite guided essays", "3 full-length mock tests with scoring", "Personalized study plan"],
-    popular: false,
+    popular: false,paymentLink: "https://rzp.io/rzp/eJ7XZseB",
   },
   {
     title: "TEF Canada Preparation",
@@ -52,7 +52,7 @@ const courses = [
     price: "₹75,000",
     duration: "16 weeks · 48 sessions",
     features: ["Full TEF exam structure & strategies", "Compréhension orale & écrite drills", "Expression orale mock interviews", "Expression écrite guided essays", "4 full-length mock tests with scoring", "Personalized feedback & study plan"],
-    popular: false,
+    popular: false,paymentLink: "https://rzp.io/rzp/p9klgb47",
   },
 ];
 
@@ -99,16 +99,17 @@ const Courses = () => (
                 </li>
               ))}
             </ul>
-            <Link
-              to="/contact"
-              className={`mt-8 block text-center py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
-                c.popular
-                  ? "btn-cta"
-                  : "bg-muted text-foreground hover:bg-primary hover:text-white"
-              }`}
-            >
-              Enroll Now
-            </Link>
+           <a href={c.paymentLink}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`mt-8 block text-center py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
+    c.popular
+      ? "btn-cta"
+      : "bg-muted text-foreground hover:bg-primary hover:text-white"
+  }`}
+>
+  Enroll Now
+</a>
           </motion.div>
         ))}
       </div>
