@@ -8,19 +8,35 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [sending, setSending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
-      toast({ title: "Please fill in all required fields.", variant: "destructive" });
-      return;
-    }
-    setSending(true);
-    setTimeout(() => {
-      setSending(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+    toast({ title: "Please fill in all required fields.", variant: "destructive" });
+    return;
+  }
+  setSending(true);
+  try {
+    const response = await fetch("https://formspree.io/f/xeevjoqb", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        message: form.message,
+      }),
+    });
+    if (response.ok) {
       toast({ title: "Message sent!", description: "We'll get back to you within 24 hours." });
       setForm({ name: "", email: "", phone: "", message: "" });
-    }, 1000);
-  };
+    } else {
+      toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+    }
+  } catch {
+    toast({ title: "Something went wrong. Please try again.", variant: "destructive" });
+  }
+  setSending(false);
+};
 
   const inputClass = "mt-1 w-full rounded-lg border border-border bg-muted px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300";
 
