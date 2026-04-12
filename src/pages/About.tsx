@@ -48,11 +48,24 @@ Why we are different:
       <div className="section-container max-w-3xl">
         <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground gold-underline pb-4 mb-8">Our Story</h2>
         <p className="text-muted-foreground leading-relaxed mb-5">
-          What started as a passion project in 2019 has grown into a thriving online community of French learners. Our founder, a Sorbonne-educated linguist, envisioned a school where Indian students could learn French without the barriers of high fees, rigid timings, or impersonal teaching.
-        </p>
+Lingua French Academy started with one frustration and one dream.
+
+The frustration? Watching talented, motivated learners give up on 
+French because classes were too expensive, too rigid, or simply 
+too boring.
+
+The dream? A place where learning French feels less like a classroom 
+and more like a conversation with a friend in a Parisian café.
+
+So in 2022, we built it.        </p>
         <p className="text-muted-foreground leading-relaxed">
-          Today, we offer structured beginner-to-advanced programs with native French instructors, small class sizes, and a warm, supportive environment. Whether you're a student, a working professional, or a retiree — there's a place for you at Lingua French Academy.
-        </p>
+Today, we help students across India and Canada — from curious 
+beginners to ambitious TEF and TCF exam takers — fall in love with 
+French. Not through textbooks alone, but through real conversations, 
+real culture, and real connections.
+
+We are not just a language school.
+We are your French family.        </p>
       </div>
     </section>
 
