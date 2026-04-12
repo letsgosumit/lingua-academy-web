@@ -63,7 +63,7 @@ const Courses = () => (
     <section className="bg-navy section-padding text-center">
       <div className="section-container">
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-white gold-underline pb-4">
-          Our Courses
+         Online French Courses
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-white/70 max-w-xl mx-auto">
           Affordable beginner programs crafted for every age group. All prices in INR, no hidden charges.
