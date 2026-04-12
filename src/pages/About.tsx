@@ -16,10 +16,29 @@ const About = () => (
     <section className="bg-navy section-padding text-center">
       <div className="section-container">
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-white gold-underline pb-4">
-          About Us
+          About Lingua French Academy
         </motion.h1>
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-white/70 max-w-2xl mx-auto leading-relaxed">
-          Lingua French Academy was founded with a simple mission: make French accessible, affordable, and enjoyable for learners across India and beyond.
+         Lingua French Academy is a premier online French language institute 
+founded with one mission — to make French learning accessible, 
+affordable, and enjoyable for everyone.
+
+We specialize in teaching French to students across India and Canada, 
+with a curriculum that blends grammar, conversation, reading, and 
+writing — all designed around real-life situations.
+
+Our tutors are certified, experienced, and passionate about helping 
+students achieve fluency. Whether you are preparing for DELF, TCF, 
+or TEF Canada, or simply want to have confident conversations in 
+French, we have the perfect course for you.
+
+Why we are different:
+- Live interactive classes — not recorded videos
+- Small batch sizes for personalized attention
+- Flexible timings for working professionals and students
+- Affordable pricing with EMI options
+- Certified tutors with 5+ years of experience
+- Proven track record with DELF, TCF and TEF Canada exams
         </motion.p>
       </div>
     </section>
