@@ -28,7 +28,7 @@ const courses = [
     price: "₹14,000",
     duration: "12 weeks · 36 sessions",
     features: ["Everything in A1", "Grammar deep-dive (tenses, articles)", "Reading & writing short texts", "Listening comprehension exercises", "Mock DELF A2 preparation", "1-on-1 mentor session"],
-    popular: true,paymentLink: "https://rzp.io/rzp/tpLwuiy",
+    popular: true,paymentLink: "https://rzp.io/rzp/E4erSBV",
   },
   {
     title: "French B1",
