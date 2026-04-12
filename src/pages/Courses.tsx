@@ -41,14 +41,14 @@ const courses = [
   {
     title: "TCF Preparation",
     level: "All Levels",
-    price: "₹69,000",
+    price: "₹65,000",
     duration: "24 weeks · 120 sessions",
     features: ["Full TCF exam structure & strategies", "Compréhension orale & écrite drills", "Expression orale mock interviews", "Expression écrite guided essays", "3 full-length mock tests with scoring", "Personalized study plan"],
     popular: false,paymentLink: "https://rzp.io/rzp/eJ7XZseB",
   },
   {
     title: "TEF Canada Preparation",
-    level: "Intermediate (B1–B2)",
+    level: "All Levels",
     price: "₹75,000",
     duration: "28 weeks · 140 sessions",
     features: ["Full TEF exam structure & strategies", "Compréhension orale & écrite drills", "Expression orale mock interviews", "Expression écrite guided essays", "4 full-length mock tests with scoring", "Personalized feedback & study plan"],
