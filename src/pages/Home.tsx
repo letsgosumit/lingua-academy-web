@@ -54,9 +54,9 @@ const Home = () => (
           <Link to="/courses" className="btn-cta text-base px-10 py-4">
             Explore Courses
           </Link>
-          <Link to="/contact" className="border border-white/20 text-white px-10 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-            Book a Free Demo
-          </Link>
+          <a href="https://calendly.com/kamit2507/30min" target="_blank" rel="noopener noreferrer" className="border border-white/20 text-white px-10 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+  Book a Free Demo
+</a>
         </motion.div>
       </div>
     </section>
