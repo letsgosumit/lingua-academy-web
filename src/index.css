@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,54 +6,54 @@
 
 @layer base {
   :root {
-    --background: 216 40% 7%;
-    --foreground: 0 0% 100%;
+    --background: 0 0% 100%;
+    --foreground: 228 60% 26%;
 
-    --card: 216 35% 13%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 228 60% 26%;
 
-    --popover: 216 35% 13%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 228 60% 26%;
 
-    --primary: 216 40% 7%;
+    --primary: 225 75% 53%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 216 32% 17%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 220 70% 95%;
+    --secondary-foreground: 228 60% 26%;
 
-    --muted: 216 25% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 70% 95%;
+    --muted-foreground: 220 13% 46%;
 
-    --accent: 355 78% 56%;
+    --accent: 225 75% 53%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 355 78% 56%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 100% / 0.08;
-    --input: 216 25% 20%;
-    --ring: 355 78% 56%;
+    --border: 222 60% 87%;
+    --input: 220 70% 95%;
+    --ring: 225 75% 53%;
 
     --radius: 0.5rem;
 
-    --navy: 216 40% 7%;
-    --navy-light: 216 32% 17%;
-    --navy-dark: 216 50% 4%;
+    --navy: 228 60% 26%;
+    --navy-light: 225 75% 53%;
+    --navy-dark: 228 70% 18%;
     --gold: 43 52% 54%;
-    --cream: 216 35% 10%;
-    --crimson: 355 78% 56%;
+    --cream: 220 70% 95%;
+    --crimson: 225 75% 53%;
 
-    --font-display: 'Playfair Display', serif;
-    --font-body: 'DM Sans', sans-serif;
+    --font-display: 'DM Serif Display', serif;
+    --font-body: 'Nunito', sans-serif;
 
-    --sidebar-background: 216 35% 10%;
+    --sidebar-background: 228 60% 26%;
     --sidebar-foreground: 0 0% 100%;
-    --sidebar-primary: 216 40% 7%;
+    --sidebar-primary: 225 75% 53%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 216 32% 17%;
+    --sidebar-accent: 228 70% 18%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 0 0% 100% / 0.08;
-    --sidebar-ring: 355 78% 56%;
+    --sidebar-border: 222 60% 87%;
+    --sidebar-ring: 225 75% 53%;
   }
 }
 
@@ -87,21 +87,21 @@
     background: hsl(var(--gold));
   }
   .card-premium {
-    @apply bg-card rounded-xl border border-white/[0.08] transition-all duration-300 ease-out;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    @apply bg-card rounded-xl border border-border transition-all duration-300 ease-out;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   }
   .card-premium:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 30px rgba(13,31,60,0.6), 0 0 20px rgba(26,47,78,0.3);
-    border-color: rgba(255,255,255,0.15);
+    box-shadow: 0 8px 30px rgba(45,91,227,0.12);
+    border-color: hsl(var(--primary));
   }
   .btn-cta {
     @apply inline-flex items-center justify-center gap-2 rounded-full font-semibold text-sm transition-all duration-300 ease-out px-8 py-3;
-    background: hsl(var(--crimson));
+    background: hsl(var(--primary));
     color: #fff;
   }
   .btn-cta:hover {
-    box-shadow: 0 0 20px hsla(355, 78%, 56%, 0.5), 0 0 40px hsla(355, 78%, 56%, 0.2);
+    box-shadow: 0 0 20px hsla(225, 75%, 53%, 0.4), 0 0 40px hsla(225, 75%, 53%, 0.15);
     filter: brightness(1.1);
   }
   .noise-overlay {
@@ -117,7 +117,7 @@
     z-index: 1;
   }
   .text-gradient-hero {
-    background: linear-gradient(180deg, #ffffff 30%, #7eb8da 100%);
+    background: linear-gradient(180deg, #ffffff 30%, #a8c8f0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

@@ -22,16 +22,16 @@ const Contact = () => {
     }, 1000);
   };
 
-  const inputClass = "mt-1 w-full rounded-lg border border-white/[0.08] bg-secondary px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-crimson/50 transition-all duration-300";
+  const inputClass = "mt-1 w-full rounded-lg border border-border bg-muted px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-300";
 
   return (
     <main className="pt-20">
-      <section className="bg-secondary section-padding text-center">
+      <section className="bg-navy section-padding text-center">
         <div className="section-container">
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-foreground gold-underline pb-4">
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-white gold-underline pb-4">
             Contact Us
           </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-muted-foreground max-w-xl mx-auto">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-white/70 max-w-xl mx-auto">
             Have questions or want to enroll? Drop us a message and we'll respond within 24 hours.
           </motion.p>
         </div>
@@ -47,8 +47,8 @@ const Contact = () => {
               { icon: MapPin, label: "Location", value: "Online — Learn from anywhere" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 text-sm">
-                <div className="w-10 h-10 rounded-lg bg-crimson/10 flex items-center justify-center shrink-0">
-                  <item.icon size={18} className="text-crimson" />
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  <item.icon size={18} className="text-primary" />
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">{item.label}</p>

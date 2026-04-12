@@ -57,7 +57,7 @@ const Testimonials = () => (
             className="card-premium p-8 text-left"
           >
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
+              <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
                 <User className="text-muted-foreground" size={22} />
               </div>
               <div>
@@ -70,7 +70,7 @@ const Testimonials = () => (
               </div>
             </div>
             <p className="text-muted-foreground italic leading-relaxed text-sm">"{t.quote}"</p>
-            <p className="mt-4 text-xs font-semibold text-gold tracking-wide uppercase">{t.course}</p>
+            <p className="mt-4 text-xs font-semibold text-primary tracking-wide uppercase">{t.course}</p>
           </motion.div>
         ))}
       </div>

@@ -60,18 +60,18 @@ const fade = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity
 
 const Courses = () => (
   <main className="pt-20">
-    <section className="bg-secondary section-padding text-center">
+    <section className="bg-navy section-padding text-center">
       <div className="section-container">
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-foreground gold-underline pb-4">
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="font-display text-4xl md:text-5xl font-bold text-white gold-underline pb-4">
           Our Courses
         </motion.h1>
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-muted-foreground max-w-xl mx-auto">
+        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="mt-6 text-white/70 max-w-xl mx-auto">
           Affordable beginner programs crafted for every age group. All prices in INR, no hidden charges.
         </motion.p>
       </div>
     </section>
 
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-muted">
       <div className="section-container grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {courses.map((c, i) => (
           <motion.div
@@ -81,21 +81,21 @@ const Courses = () => (
             whileInView="visible"
             viewport={{ once: true }}
             variants={fade}
-            className={`relative card-premium p-8 flex flex-col ${c.popular ? "ring-2 ring-gold" : ""}`}
+            className={`relative card-premium p-8 flex flex-col ${c.popular ? "ring-2 ring-primary" : ""}`}
           >
             {c.popular && (
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-gold text-background text-xs font-bold px-4 py-1 rounded-full">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full">
                 Most Popular
               </span>
             )}
             <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">{c.level}</span>
             <h3 className="font-display text-xl font-bold text-foreground mt-2">{c.title}</h3>
             <p className="text-sm text-muted-foreground mt-1">{c.duration}</p>
-            <p className="text-3xl font-display font-bold text-gold mt-5">{c.price}</p>
+            <p className="text-3xl font-display font-bold text-primary mt-5">{c.price}</p>
             <ul className="mt-6 flex-1 space-y-3">
               {c.features.map((f, j) => (
                 <li key={j} className="flex items-start gap-2.5 text-sm text-muted-foreground">
-                  <Check size={16} className="text-crimson mt-0.5 shrink-0" /> {f}
+                  <Check size={16} className="text-primary mt-0.5 shrink-0" /> {f}
                 </li>
               ))}
             </ul>
@@ -104,7 +104,7 @@ const Courses = () => (
               className={`mt-8 block text-center py-3 rounded-full font-semibold text-sm transition-all duration-300 ${
                 c.popular
                   ? "btn-cta"
-                  : "bg-secondary text-foreground hover:bg-crimson hover:text-white"
+                  : "bg-muted text-foreground hover:bg-primary hover:text-white"
               }`}
             >
               Enroll Now
@@ -118,7 +118,7 @@ const Courses = () => (
     <Testimonials />
 
     {/* FAQ */}
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-muted">
       <div className="section-container max-w-3xl">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -140,7 +140,7 @@ const Courses = () => (
         <Accordion type="single" collapsible className="w-full space-y-3">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`faq-${i}`} className="card-premium px-6 border-none">
-              <AccordionTrigger className="text-left text-foreground hover:text-crimson transition-colors duration-300 py-5">{faq.q}</AccordionTrigger>
+              <AccordionTrigger className="text-left text-foreground hover:text-primary transition-colors duration-300 py-5">{faq.q}</AccordionTrigger>
               <AccordionContent className="text-muted-foreground pb-5">{faq.a}</AccordionContent>
             </AccordionItem>
           ))}

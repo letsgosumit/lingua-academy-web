@@ -25,9 +25,9 @@ const fade = { hidden: { opacity: 0, y: 30 }, visible: (i: number) => ({ opacity
 const Home = () => (
   <main>
     {/* Hero */}
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay">
-      <img src={heroImage} alt="French classroom" className="absolute inset-0 w-full h-full object-cover" width={1920} height={1080} />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/70 to-background" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden noise-overlay bg-navy">
+      <img src={heroImage} alt="French classroom" className="absolute inset-0 w-full h-full object-cover opacity-20" width={1920} height={1080} />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/60 to-navy" />
       <div className="relative z-10 text-center px-4 max-w-3xl">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ const Home = () => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mt-6 text-lg md:text-xl text-foreground/60 max-w-xl mx-auto leading-relaxed"
+          className="mt-6 text-lg md:text-xl text-white/70 max-w-xl mx-auto leading-relaxed"
         >
           Interactive online classes for beginners of all ages. Learn from native speakers and fall in love with the language of art, culture, and diplomacy.
         </motion.p>
@@ -54,7 +54,7 @@ const Home = () => (
           <Link to="/courses" className="btn-cta text-base px-10 py-4">
             Explore Courses
           </Link>
-          <Link to="/contact" className="border border-foreground/20 text-foreground px-10 py-4 rounded-full font-semibold hover:bg-foreground/5 transition-all duration-300">
+          <Link to="/contact" className="border border-white/20 text-white px-10 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
             Get in Touch
           </Link>
         </motion.div>
@@ -62,11 +62,11 @@ const Home = () => (
     </section>
 
     {/* Stats */}
-    <section className="bg-secondary section-padding">
+    <section className="bg-muted section-padding">
       <div className="section-container grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
         {stats.map((s, i) => (
           <motion.div key={i} custom={i} initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fade}>
-            <p className="text-4xl md:text-5xl font-display font-bold text-gold">{s.value}</p>
+            <p className="text-4xl md:text-5xl font-display font-bold text-primary">{s.value}</p>
             <p className="text-sm text-muted-foreground mt-2">{s.label}</p>
           </motion.div>
         ))}
@@ -91,8 +91,8 @@ const Home = () => (
               variants={fade}
               className="card-premium p-8"
             >
-              <div className="w-14 h-14 rounded-xl bg-crimson/10 flex items-center justify-center mx-auto mb-5">
-                <f.icon className="text-crimson" size={24} />
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                <f.icon className="text-primary" size={24} />
               </div>
               <h3 className="font-display text-lg font-semibold text-foreground">{f.title}</h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{f.desc}</p>
@@ -106,10 +106,10 @@ const Home = () => (
     <Testimonials />
 
     {/* CTA */}
-    <section className="section-padding bg-secondary text-center">
+    <section className="section-padding bg-navy text-center">
       <div className="section-container">
-        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Ready to speak French?</h2>
-        <p className="mt-4 text-muted-foreground max-w-md mx-auto">Join thousands of happy learners. Your first class is just a click away.</p>
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-white">Ready to speak French?</h2>
+        <p className="mt-4 text-white/60 max-w-md mx-auto">Join thousands of happy learners. Your first class is just a click away.</p>
         <Link to="/courses" className="btn-cta mt-10 text-base px-12 py-4">
           View Courses & Pricing
         </Link>
