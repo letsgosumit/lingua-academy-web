@@ -55,7 +55,7 @@ const Home = () => (
             Explore Courses
           </Link>
           <Link to="/contact" className="border border-white/20 text-white px-10 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
-            Get in Touch
+            Book a Free Demo
           </Link>
         </motion.div>
       </div>
