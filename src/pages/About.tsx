@@ -36,7 +36,7 @@ Why we are different:
 - Live interactive classes — not recorded videos
 - Small batch sizes for personalized attention
 - Flexible timings for working professionals and students
-- Affordable pricing with EMI options
+- Affordable pricing
 - Certified tutors with 5+ years of experience
 - Proven track record with DELF, TCF and TEF Canada exams
         </motion.p>
