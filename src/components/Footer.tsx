@@ -1,13 +1,12 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => (
   <footer className="bg-navy border-t border-white/[0.08]">
     <div className="section-container py-16 grid md:grid-cols-3 gap-10">
       <div>
-        <h3 className="font-display text-xl font-bold text-white mb-4">
-          Lingua <span className="text-gold">French</span> Academy
-        </h3>
+        <img src={logo} alt="Lingua French Academy" className="h-16 w-auto mb-4" />
         <p className="text-sm text-white/60 leading-relaxed">
           Your gateway to mastering the French language. Online classes for beginners of all ages, taught by experienced native speakers.
         </p>
@@ -25,7 +24,7 @@ const Footer = () => (
       <div>
         <h4 className="font-display font-semibold text-white mb-4">Get in Touch</h4>
         <div className="flex flex-col gap-3 text-sm text-white/60">
-          <span className="flex items-center gap-2"><Mail size={14} className="text-primary" /> hello@linguafrench.in</span>
+          <span className="flex items-center gap-2"><Mail size={14} className="text-primary" /> bonjour@linguafrenchacademy.com</span>
           <span className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +91 98765 43210</span>
           <span className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Online — Worldwide</span>
         </div>

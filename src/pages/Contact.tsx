@@ -42,7 +42,7 @@ const Contact = () => {
           <div className="space-y-8">
             <h2 className="font-display text-xl font-bold text-foreground">Get in Touch</h2>
             {[
-              { icon: Mail, label: "Email", value: "hello@linguafrench.in" },
+              { icon: Mail, label: "Email", value: "bonjour@linguafrenchacademy.com" },
               { icon: Phone, label: "Phone", value: "+91 98765 43210" },
               { icon: MapPin, label: "Location", value: "Online — Learn from anywhere" },
             ].map((item, i) => (
