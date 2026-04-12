@@ -5,16 +5,16 @@ import heroImage from "@/assets/hero-classroom.jpg";
 import Testimonials from "@/components/Testimonials";
 
 const stats = [
-  { value: "5,000+", label: "Students Enrolled" },
-  { value: "50+", label: "Expert Instructors" },
+  { value: "500+", label: "Students Trained" },
+  { value: "10+", label: "Expert Instructors" },
   { value: "98%", label: "Satisfaction Rate" },
   { value: "12+", label: "Countries Reached" },
 ];
 
 const features = [
   { icon: BookOpen, title: "Structured Curriculum", desc: "Step-by-step lessons designed for absolute beginners to build fluency." },
-  { icon: Users, title: "Small Batch Sizes", desc: "Personalised attention with a maximum of 8 students per batch." },
-  { icon: Globe, title: "Native French Tutors", desc: "Learn authentic pronunciation and culture from native speakers." },
+  { icon: Users, title: "Small Batch Sizes", desc: "Personalised attention with a maximum of 5 students per batch." },
+  { icon: Globe, title: "Expert French Tutors", desc: "Learn authentic pronunciation and culture from expert speakers." },
   { icon: Award, title: "Certified Courses", desc: "Receive certificates aligned with CEFR standards upon completion." },
   { icon: Clock, title: "Flexible Scheduling", desc: "Choose from morning, evening, and weekend batches to suit your routine." },
   { icon: Headphones, title: "Recorded Sessions", desc: "Access recorded classes anytime so you never miss a lesson." },
@@ -43,7 +43,9 @@ const Home = () => (
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mt-6 text-lg md:text-xl text-white/70 max-w-xl mx-auto leading-relaxed"
         >
-          Interactive online classes for beginners of all ages. Learn from native speakers and fall in love with the language of art, culture, and diplomacy.
+          India's trusted online French academy for beginners to advanced learners. 
+Expert tutors, live classes, and proven results for DELF, TCF & 
+TEF Canada preparation.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -77,9 +79,15 @@ const Home = () => (
     <section className="section-padding bg-background">
       <div className="section-container text-center">
         <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground gold-underline pb-4">
-          Why Choose Lingua French?
+          Why Choose Us?
         </h2>
-        <p className="mt-6 text-muted-foreground max-w-xl mx-auto">We combine modern teaching methods with the charm of French culture to deliver an unmatched learning experience.</p>
+        <p className="mt-6 text-muted-foreground max-w-xl mx-auto">Why Thousands Choose Lingua French Academy
+
+Whether you're learning French for travel, career growth, Canadian 
+immigration, or simply a love of the language — Lingua French Academy 
+gives you the tools to succeed. Our expert tutors bring real-world French 
+to life through interactive live classes, cultural immersion, and a 
+curriculum designed for Indian and Canadian learners.</p>
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
             <motion.div
