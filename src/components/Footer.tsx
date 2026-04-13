@@ -25,7 +25,7 @@ const Footer = () => (
         <h4 className="font-display font-semibold text-white mb-4">Get in Touch</h4>
         <div className="flex flex-col gap-3 text-sm text-white/60">
           <span className="flex items-center gap-2"><Mail size={14} className="text-primary" /> bonjour@linguafrenchacademy.com</span>
-          <span className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +91 98765 43210</span>
+          <span className="flex items-center gap-2"><Phone size={14} className="text-primary" /> +91 8826839519</span>
           <span className="flex items-center gap-2"><MapPin size={14} className="text-primary" /> Online — Worldwide</span>
         </div>
       </div>
