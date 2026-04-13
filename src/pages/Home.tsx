@@ -15,7 +15,7 @@ const features = [
   { icon: BookOpen, title: "Structured Curriculum", desc: "Step-by-step lessons designed for absolute beginners to build fluency." },
   { icon: Users, title: "Small Batch Sizes", desc: "Personalised attention with a maximum of 5 students per batch." },
   { icon: Globe, title: "Expert French Tutors", desc: "Learn authentic pronunciation and culture from expert speakers." },
-  { icon: Award, title: "Certified Courses", desc: "Receive certificates aligned with CEFR standards upon completion." },
+  { icon: Award, title: "Daily Speaking Practice", desc: "Speak Confidently, Step by Step." },
   { icon: Clock, title: "Flexible Scheduling", desc: "Choose from morning, evening, and weekend batches to suit your routine." },
   { icon: Headphones, title: "Recorded Sessions", desc: "Access recorded classes anytime so you never miss a lesson." },
 ];
