@@ -8,7 +8,7 @@ const stats = [
   { value: "500+", label: "Students Trained" },
   { value: "10+", label: "Expert Instructors" },
   { value: "98%", label: "Satisfaction Rate" },
-  { value: "12+", label: "Countries Reached" },
+  { value: "100%", label: "Online" },
 ];
 
 const features = [
