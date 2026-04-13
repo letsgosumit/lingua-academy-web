@@ -19,7 +19,7 @@ const courses = [
     level: "Absolute Beginner",
     price: "₹11,000",
     duration: "4 weeks · 20 sessions",
-    features: ["Alphabets, pronunciation & greetings", "Basic vocabulary (500+ words)", "Simple conversations & role-plays", "Weekly assignments & quizzes", "Certificate of completion"],
+    features: ["Alphabets, pronunciation & greetings", "Basic vocabulary (500+ words)", "Simple conversations & role-plays", "Weekly assignments & quizzes"],
     popular: false,paymentLink: "https://rzp.io/rzp/NKxsjB5",
   },
   {
