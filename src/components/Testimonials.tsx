@@ -14,8 +14,8 @@ const testimonials = [
   },
   {
     name: "Ananya Singh",
-    quote: "I cleared my DELF B2 exam on the first attempt thanks to Lingua. The exam prep module is exceptional.",
-    course: "Completed: B2 DELF Prep",
+    quote: "I cleared my DELF B1 exam on the first attempt thanks to Lingua. The exam prep module is exceptional.",
+    course: "Completed: B1 DELF Prep",
   },
 ];
 
