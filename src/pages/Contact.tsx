@@ -59,7 +59,7 @@ const Contact = () => {
             <h2 className="font-display text-xl font-bold text-foreground">Get in Touch</h2>
             {[
               { icon: Mail, label: "Email", value: "bonjour@linguafrenchacademy.com" },
-              { icon: Phone, label: "Phone", value: "+91 98765 43210" },
+              { icon: Phone, label: "Phone", value: "+91 8826839519" },
               { icon: MapPin, label: "Location", value: "Online — Learn from anywhere" },
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-4 text-sm">
