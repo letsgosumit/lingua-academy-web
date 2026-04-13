@@ -59,14 +59,14 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden bg-navy border-t border-white/[0.08] pb-6">
+        <div className="md:hidden bg-white border-t border-[hsl(var(--cream))] pb-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               onClick={() => setOpen(false)}
               className={`block px-6 py-3.5 text-sm font-semibold transition-colors duration-300 ${
-                location.pathname === link.to ? "text-primary" : "text-white/80 hover:text-primary"
+                location.pathname === link.to ? "text-primary" : "text-foreground hover:text-primary"
               }`}
               style={{ fontFamily: "var(--font-body)" }}
             >
