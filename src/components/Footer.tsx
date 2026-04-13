@@ -8,7 +8,7 @@ const Footer = () => (
       <div>
         <img src={logo} alt="Lingua French Academy" className="h-16 w-auto mb-4" />
         <p className="text-sm text-white/60 leading-relaxed">
-          Your gateway to mastering the French language. Online classes for beginners of all ages, taught by experienced native speakers.
+          Your gateway to mastering the French language. Online classes for beginners of all ages, taught by experienced tutors.
         </p>
       </div>
       <div>
