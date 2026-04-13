@@ -10,7 +10,7 @@ const faqs = [
   { q: " Do you offer classes for Canadian immigration (TEF/TCF)?", a: "Yes! We have dedicated TEF Canada and TCF preparation courses." },
   { q: "Can I switch batches after enrolling?", a: "Absolutely. You can request a batch change up to twice during your course by contacting our support team. We'll move you to the next available slot at no extra charge." },
   { q: "Can I switch batches if my schedule changes?", a: "Absolutely! We offer flexible batch switching at no extra charge." },
-  { q: "What happens if I miss a class?", a: "All live sessions are recorded and shared within 2 hours. You also get access to session notes and can attend a doubt-clearing session every Saturday." },
+  { q: "What happens if I miss a class?", a: "All live sessions are recorded and shared within 2 hours. You also get access to session notes." },
 ];
 
 const courses = [
